@@ -32,6 +32,9 @@ week3 : https://nithiyashree3066.github.io/Gwing-internship/week3/
 week4 : https://nithiyashree3066.github.io/Gwing-internship/week4/
 
 
+all task in one output : 
+
+
 ## 💡 Skills Gained
 
 - HTML5, CSS3, JavaScript
