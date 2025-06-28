@@ -32,7 +32,7 @@ week3 : https://nithiyashree3066.github.io/Gwing-internship/week3/
 week4 : https://nithiyashree3066.github.io/Gwing-internship/week4/
 
 
-all task in one output : 
+all task in one output :  https://nithiyashree3066.github.io/Gwing-internship/
 
 
 ## 💡 Skills Gained
@@ -63,6 +63,11 @@ If you'd like to connect or collaborate, feel free to reach out!
 ## 📌 Acknowledgement
 
 I would like to express my gratitude to *Gwing Technology* for providing this internship opportunity and for guiding me through this valuable learning experience.
+
+
+Big thanks to GWING Software Technologies for this amazing learning opportunity!
+
+
 
 
 
