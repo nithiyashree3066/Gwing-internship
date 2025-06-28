@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Contact Us Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      emailjs.init("LFlJk6Td3SzFb8tY1"); // Your Public Key
+    });
+  </script>
+</head>
+<body>
+
+  <section>
+    <div class="section-header">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          Feel free to reach out to us with any questions or feedback. 
+          Our team is here to help you with your queries and provide the support you need. 
+          Simply fill out the form below, and we'll get back to you as soon as possible.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p>165 Madhavaram Main Road,<br>Chennai, Tamilnadu,<br>600062</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p>571-457-2321</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Email</h4>
+              <p>samyutha@sugar.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contact-form" name="contact-form">
+            <h2>Send Message</h2>
+            <div class="input-box">
+              <input type="text" name="from_name" required />
+              <span>Full Name</span>
+            </div>
+            <div class="input-box">
+              <input type="email" name="email_id" required />
+              <span>Email</span>
+            </div>
+            <div class="input-box">
+              <textarea name="message" required></textarea>
+              <span>Type your Message...</span>
+            </div>
+            <div class="input-box">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_1rgwvpa", "template_ioraitq", this)
+        .then(function () {
+          alert("Message sent successfully!");
+        }, function (error) {
+          console.error("EmailJS Error: ", error);
+          alert("Failed to send message:\n" + JSON.stringify(error));
+        });
+
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
