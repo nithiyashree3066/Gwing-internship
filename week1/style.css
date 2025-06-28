@@ -1,0 +1,93 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: cambria;
+}
+
+body{
+    min-height: 70vh;
+    background-image: url(lap.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(20, 120, 120);
+  box-sizing: border-box;
+  position: relative; /* add this to help with absolute children positioning */
+}
+
+.navbar .navbar-header {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+  .navbar .navbar-item {
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+  .navbar .navbar-item ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  .navbar .navbar-item ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .navbar .navbar-item ul li a:hover {
+    color: #ccc;
+  }
+  .navbar-btn {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar .navbar-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* add margin reset to avoid default margins */
+  }
+
+  .navbar .navbar-item ul li {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .navbar .navbar-item ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .navbar-btn {
+    border: none;
+    background: none;
+    border: 1px solid white;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+  }
+  .navbar-btn span {
+    display: block;
+    width: 20px;
+    border-top: 1px solid white;
+  }
+  .navbar-btn span:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  .hide {
+    display: none;
+  }
+} 
